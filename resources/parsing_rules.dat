@@ -1,0 +1,13 @@
+hasElecEnergy,energy,Float,energyUnits
+hasGibbsFreeEnergy,G,Float,gibbsUnits
+hasXYZGeometry,geometry,String,
+hasInChI,inchi,String,
+hasFreqList,frequencies,Vector,freqUnits
+hasTemperature,temp,Float,tempUnits
+hasPressure,pressure,Float,pressUnits
+hasMolMass,molmass,Float,r"nonsi_amu"
+hasSolvent,solvent,String,
+hasSolventPolarity,solvEps,Float,r"def_unit"
+hasSymmetryNumber,symmnumb,Integer,
+hasRotTemps,rottemp,Vector,r"si_k"
+hasMomentInertia,mominertia,Vector,r"atomic_units"

@@ -30,6 +30,8 @@ def main():
 		print("Could not generate the knowledge graph")
 		return None
 	outfile = args.graphfile.replace(".dot",".owl")
+	if ("OntoRXN.owl" in args.ontofile):
+		args.ontofile = args.ontofile.replace("/OntoRXN.owl","")
 	knowledge_graph_gen(ontology_route=args.ontofile,report_id=args.reportid,
 						config_file=args.loginfile, graph_file=args.graphfile,
 						out_file=outfile,collapse_graph=args.collapse,

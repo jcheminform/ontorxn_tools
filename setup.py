@@ -4,5 +4,5 @@ setup(name='ontorxn_tools',
 	  author="Diego Garay-Ruiz",
 	  author_email="dgaray@iciq.es",
 	  description="Generation of knowledge graphs for reaction networks based on the OntoRXN ontology",
-	  py_modules=['ontorxn_tools'],
+	  py_modules=['ontorxn_tools','ontorxn_user'],
 	  install_requires=['networkx','owlready2','rdflib','py_iochem'])

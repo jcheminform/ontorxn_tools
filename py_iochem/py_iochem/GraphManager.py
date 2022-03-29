@@ -221,7 +221,9 @@ def formula_mapper(G_list,property_list):
 	# Transform to an object, access series
 	block = xmltodict.parse(cblock)
 	series_info = block["configuration"]["parameters"]["series"]["serie"]
-
+	# Handle situations where a single series is present by transforming to a list
+	if (not isinstance(series_info,list)):
+		series_info = [series_info]
 	# Go along all existing graphs and match formula information
 	for ig,G in enumerate(G_list):
 		#And now we can iterate along all defined series

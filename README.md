@@ -4,11 +4,13 @@ Diego Garay-Ruiz, 2022
 Institute of Chemical Research of Catalonia, Prof. Carles Bo Research group
 
 ## Overview
-**ontorxn-tools** is a Python library developed to automate the generation of knowledge graphs for reaction networks based on the [OntoRXN](https://gitlab.com/dgarayr/ontorxn) ontology. Both network topology and calculations can be extracted from the Create module of [ioChem-BD](https://www.iochem-bd.org), in the form of *reports*.
+**ontorxn-tools** is a Python library developed to automate the generation of knowledge graphs for reaction networks based on the [OntoRXN](https://gitlab.com/dgarayr/ontorxn) ontology. Both network topology and calculations can be extracted from the Create module of [ioChem-BD](https://www.iochem-bd.org), in the form of *reports*. More details are available on the preprint at [ChemRxiv](https://doi.org/10.26434/chemrxiv-2022-3sqwp).
 
 The bundled **py-ioChem** package handles this ioChem-BD connection, through modules to communicate with the REST API (ReportAPIManager), handle DOT-formatted graphs (GraphManager) and process CML files (CMLtoPy)
 
 Be sure to install **py-ioChem** *first* in order to fulfill the dependencies of ontorxn-tools.
+
+Additionally, the **ontorxn-user** accompanying module provides assistance tools to build and run SPARQL queries over knowledge graphs.
 
 ## Core functionalities
 ### Network definition

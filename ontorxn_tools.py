@@ -582,13 +582,14 @@ def knowledge_graph_gen(ontology_route,report_id,config_file,graph_file,out_file
 	properties,calcs = report.report_dump()
 	GraphManager.formula_mapper(G_list,properties)
 
+	# Handle files, with default naming scheme calc_CID.cml
+	if (fetch_files):
+		report.batch_cml_dump()
+
 	### 2. Ontology management
 	# Load our ontology (from local file) and the imports from their default IRI-based names from onto_path
 	onto_manager = OntoRXNWrapper()
 	onto_manager.load_ontorxn(ontology_route)
-	# Handle files, with default naming scheme calc_CID.cml
-	if (fetch_files):
-		report.batch_cml_dump()
 	### 3. Generate the KG
 	### 3.1 Take calcs and species from the report
 	track_calcs,track_species = calc_instantiation(onto_manager,calcs,report_id)
